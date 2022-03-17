@@ -39,10 +39,12 @@ class DeckOfCards {
                     deck.push(card);
                 }
              }
-             console.log("line 18"); //does not print to console
+             console.log("line 18"); //does not print to console - i don't know why this isn't working off the top of my head... strange, though. 
              return deck;
         }
-        console.log(deck); //does not print to console
+        // this isn't printing to console because the variable deck is out of scope here, because you're trying to access it outside of the function in which it was initilized. 
+        //if you want to log what deck is, you'll need to do it inside the curly braces of the function where let deck= new Array() is declared
+        console.log(deck); //does not print to console 
     }
 }
 //console.log(DeckOfCards);
